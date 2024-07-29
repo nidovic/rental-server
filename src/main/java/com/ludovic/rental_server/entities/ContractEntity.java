@@ -48,12 +48,12 @@ public class ContractEntity{
 
     @JsonProperty("tenant")
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "userId", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private UserEntity tenant;
 
     @JsonProperty("property")
     @ManyToOne
-    @JoinColumn(name = "property_id", referencedColumnName = "propertyId", nullable = false)
+    @JoinColumn(name = "property_id", nullable = false)
     private PropertyEntity property;
 
     @OneToMany(mappedBy = "contract", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

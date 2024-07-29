@@ -41,7 +41,7 @@ public class AddressEntity {
     private OffsetDateTime updatedAt;
 
     @ManyToOne
-    @JoinColumn(name = "city_id", referencedColumnName = "cityId", nullable = false)
+    @JoinColumn(name = "city_id", nullable = false)
     private CityEntity city;
 
     @OneToOne(mappedBy = "address")

@@ -37,7 +37,7 @@ public class CashReceiptEntity {
 
     @JsonProperty("cashier")
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "userId", nullable = true)
+    @JoinColumn(name = "user_id", nullable = true)
     private UserEntity cashier;
 
     @OneToMany(mappedBy = "cashReceipt", cascade = CascadeType.ALL)

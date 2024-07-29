@@ -48,7 +48,7 @@ public class ContractPaymentEntity {
 
     @JsonProperty("contract")
     @ManyToOne
-    @JoinColumn(name = "contract_id", referencedColumnName = "contractId", nullable = false)
+    @JoinColumn(name = "contract_id", nullable = false)
     private ContractEntity contract;
 
     @OneToMany(mappedBy = "contractPayment", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

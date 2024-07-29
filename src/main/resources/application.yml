@@ -16,6 +16,9 @@ spring:
       mode: always
   jmx:
     server:
+springdoc:
+  enable-native-support : true
+  swagger-ui.path : /swagger
 
 
 

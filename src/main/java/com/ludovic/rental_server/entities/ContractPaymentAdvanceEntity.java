@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.OffsetDateTime;
-import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -37,10 +36,10 @@ public class ContractPaymentAdvanceEntity {
 
     @JsonProperty("contractPayment")
     @ManyToOne
-    @JoinColumn(name = "contract_payment_id", referencedColumnName = "contractPaymentId", nullable = false)
+    @JoinColumn(name = "contract_payment_id", nullable = false)
     private ContractPaymentEntity contractPayment;
 
     @ManyToOne
-    @JoinColumn(name = "cash_receipt_id",  referencedColumnName = "cashReceiptId", nullable = false)
+    @JoinColumn(name = "cash_receipt_id",  nullable = false)
     private CashReceiptEntity cashReceipt;
 }
