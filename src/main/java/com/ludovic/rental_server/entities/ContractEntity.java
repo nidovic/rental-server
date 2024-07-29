@@ -35,6 +35,9 @@ public class ContractEntity{
     @JsonProperty("paymentType")
     private String paymentType; // PerDay, PerMonth,
 
+    @JsonProperty("status")
+    private String status; // Running, End,
+
     @JsonProperty("paymentDay")
     private Integer paymentDay;
 
