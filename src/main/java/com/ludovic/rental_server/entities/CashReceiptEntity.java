@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -38,4 +39,8 @@ public class CashReceiptEntity {
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "userId", nullable = true)
     private UserEntity cashier;
+
+    @OneToMany(mappedBy = "cashReceipt", cascade = CascadeType.ALL)
+    private List<ContractPaymentAdvanceEntity> contractPaymentAdvances;
+
 }
