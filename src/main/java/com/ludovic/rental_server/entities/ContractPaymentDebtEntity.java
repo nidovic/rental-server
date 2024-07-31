@@ -39,7 +39,7 @@ public class ContractPaymentDebtEntity {
 
     @JsonProperty("contractPayment")
     @ManyToOne
-    @JoinColumn(name = "contract_payment_id", referencedColumnName = "contractPaymentId", nullable = false)
+    @JoinColumn(name = "contract_payment_id", nullable = false)
     private ContractPaymentEntity contractPayment;
 
 }

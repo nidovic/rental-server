@@ -38,10 +38,10 @@ public class SiteEntity {
 
     @JsonProperty("address")
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "address_id", referencedColumnName = "addressId")
+    @JoinColumn(name = "address_id")
     private AddressEntity address;
 
     @JsonProperty("properties")
     @OneToMany(mappedBy = "site", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<CityEntity> properties = new ArrayList<>();
+    private List<PropertyEntity> properties = new ArrayList<>();
 }

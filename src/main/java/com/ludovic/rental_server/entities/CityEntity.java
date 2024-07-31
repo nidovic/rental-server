@@ -31,7 +31,7 @@ public class CityEntity {
 
     @JsonProperty("country")
     @ManyToOne
-    @JoinColumn(name = "country_id", referencedColumnName = "countryId", nullable = false)
+    @JoinColumn(name = "country_id", nullable = false)
     private CountryEntity country;
 
     @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

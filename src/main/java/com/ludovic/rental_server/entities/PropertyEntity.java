@@ -34,9 +34,9 @@ public class PropertyEntity {
 
     @JsonProperty("site")
     @ManyToOne
-    @JoinColumn(name = "site_id", referencedColumnName = "siteId", nullable = false)
+    @JoinColumn(name = "site_id", nullable = false)
     private SiteEntity site;
 
-    @OneToMany(mappedBy = "tenant", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "property", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<ContractEntity> contracts = new ArrayList<>();
 }
